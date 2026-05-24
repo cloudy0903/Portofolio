@@ -273,11 +273,23 @@ span {
   border-radius: 2rem;
   overflow: hidden;
   box-shadow: 0 0 1rem var(--bg-color);
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  will-change: transform;
+}
+
+.portfolio-box:hover {
+  transform: perspective(1000px) rotateX(5deg) rotateY(-5deg) scale(1.02);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.25);
 }
 
 .portfolio-box img {
   width: 100%;
-  transition: 0.5s ease;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  display: block;
+  backface-visibility: hidden;
 }
 
 .portfolio-box:hover img {
@@ -298,7 +310,7 @@ span {
   text-align: center;
   padding: 0 4rem;
   transform: translateY(100%);
-  transition: 0.5s ease;
+  transition: transform 0.5s ease;
 }
 
 .portfolio-box:hover .portfolio-layer {
@@ -307,11 +319,13 @@ span {
 
 .portfolio-layer h4 {
   font-size: 3rem;
+  color: #fff;
 }
 
 .portfolio-layer p {
   font-size: 1.6rem;
   margin: 0.3rem 0 1rem;
+  color: #fff;
 }
 
 .portfolio-layer a {
@@ -383,7 +397,138 @@ span {
   color: #ccc;
 }
 
-/* ---------- RESPONSIVE ---------- */
+/* ---------- SPLASH SCREEN ---------- */
+.splash-screen {
+  position: fixed;
+  z-index: 99999;
+  inset: 0;
+  background: #181c2f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  perspective: 1200px;
+  transition: opacity 0.7s cubic-bezier(.4,0,.2,1);
+}
+
+.splash-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, #8f43ee 0%, #181c2f 100%);
+  opacity: 0.7;
+  z-index: 1;
+  animation: splashGradientMove 3s infinite alternate;
+}
+
+@keyframes splashGradientMove {
+  0% { background-position: 70% 30%; }
+  100% { background-position: 30% 70%; }
+}
+
+#splash-particles {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+
+.splash-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  color: #fff;
+  animation: fadeInSplash 1.2s;
+  padding: 2.5rem 2.5rem 2.5rem 2.5rem;
+  border-radius: 2rem;
+  background: rgba(24,28,47,0.7);
+  box-shadow: 0 8px 32px rgba(138,43,226,0.18);
+  backdrop-filter: blur(2px);
+  transform-style: preserve-3d;
+}
+
+.splash-logo-3d {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.2rem;
+  animation: floatLogo 2.5s infinite ease-in-out;
+  perspective: 800px;
+}
+
+.splash-logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  box-shadow: 0 8px 32px rgba(138,43,226,0.25), 0 0 0 8px rgba(255,255,255,0.08);
+  border: 3px solid #fff;
+  background: #fff;
+  transform: rotateY(20deg) rotateX(12deg) scale(1.08);
+  filter: drop-shadow(0 0 24px #8f43ee88);
+  animation: logo3dSpin 4s infinite linear;
+}
+
+@keyframes logo3dSpin {
+  0% { transform: rotateY(20deg) rotateX(12deg) scale(1.08);}
+  50% { transform: rotateY(-20deg) rotateX(-12deg) scale(1.13);}
+  100% { transform: rotateY(20deg) rotateX(12deg) scale(1.08);}
+}
+
+@keyframes floatLogo {
+  0%,100% { transform: translateY(0);}
+  50% { transform: translateY(-18px);}
+}
+
+.splash-title {
+  font-size: 2rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  min-height: 3.2rem;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 16px #8f43ee55;
+  transform: translateZ(40px);
+}
+
+.splash-loader {
+  width: 48px;
+  height: 48px;
+  border: 4px solid #fff;
+  border-top: 4px solid #8f43ee;
+  border-radius: 50%;
+  margin: 1.2rem auto 0.8rem auto;
+  animation: spinSplash 1s linear infinite;
+  box-shadow: 0 2px 8px rgba(138,43,226,0.12);
+}
+
+@keyframes spinSplash {
+  100% { transform: rotate(360deg);}
+}
+
+.splash-tip {
+  font-size: 1.1rem;
+  color: #e0d7fa;
+  margin-top: 1.2rem;
+  opacity: 0.8;
+  letter-spacing: 0.2px;
+  animation: fadeInSplash 1.8s;
+  text-shadow: 0 1px 8px #8f43ee33;
+}
+
+@keyframes fadeInSplash {
+  from { opacity: 0; transform: scale(0.95);}
+  to { opacity: 1; transform: scale(1);}
+}
+
+.splash-screen.hide {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.7s cubic-bezier(.4,0,.2,1);
+}
+
+@media (max-width: 600px) {
+  .certificate-container { grid-template-columns: 1fr; padding: 0 1rem; }
+  .certificate-box img { height: 120px; }
+}
+
 @media (max-width: 1200px) {
   html { font-size: 55%; }
 }
@@ -427,3 +572,4 @@ span {
   html { font-size: 50%; }
   .contact .input-box input { width: 100%; }
 }
+
