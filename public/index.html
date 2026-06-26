@@ -19,36 +19,42 @@
 
 
   <!-- Google Fonts -->
-  <link rel="shortcut icon" type="image/x-icon" href="images/.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins&family=Questrial&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
   <!-- Boxicons -->
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/styles.css" />
-  <link rel="icon" href="images/favicon.ico" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="images/profile.png" />
   <meta name="description" content="Portofolio kreatif Sugiyanto Prasetio - Web Developer, Desainer Grafis, dan Penulis Lepas.">
 </head>
 <body>
+  <!-- Background Glow Blobs -->
+  <div class="glow-blob glow-blob-1"></div>
+  <div class="glow-blob glow-blob-2"></div>
+  <div class="glow-blob glow-blob-3"></div>
+
   <!-- Splash Screen -->
   <div id="splash" class="splash-screen">
     <div class="splash-gradient"></div>
     <div id="splash-particles"></div>
     <div class="splash-content">
-      <div class="splash-logo-3d">
+      <div class="splash-logo-container">
+        <div class="splash-glow-ring ring-1"></div>
+        <div class="splash-glow-ring ring-2"></div>
         <img src="images/profile.png" alt="Logo" class="splash-logo" />
       </div>
       <h2 class="splash-title">
-        <span id="splash-typing"></span>
+        <span class="splash-subtitle">WELCOME TO DIGITAL PORTFOLIO OF</span><br>
+        <span class="splash-main-title">SUGIYANTO PRASETIO</span>
       </h2>
-      <div class="splash-loader"></div>
-      <div class="splash-tip">Memuat portofolio...</div>
+      <div class="splash-loading-bar-container">
+        <div class="splash-loading-bar"></div>
+      </div>
+      <div class="splash-tip">Memuat portofolio digital...</div>
     </div>
   </div>
   <!-- Header -->
@@ -88,57 +94,87 @@
   </section>
 
   <!-- Services -->
-<section class="services" id="services">
-  <h2 class="heading">My<span>Skills</span></h2>
+  <section class="services" id="services">
+    <h2 class="heading">My<span>Skills</span></h2>
 
-  <div class="services-container">
-    <div class="services-box">
-      <p>
-       Saya mengembangkan solusi digital yang responsif, fungsional, dan user-friendly. Menggabungkan keahlian dalam desain pemrograman web, UI/UX, dan dukungan teknis.
-       Saya telah menggunakan berbagai teknologi mulai dari bahasa pemrograman, framework, hingga library modern yang mendukung proses pengembangan aplikasi web yang handal dan berkelanjutan.
-      </p>
+    <div class="services-container">
+      <!-- Web Development -->
+      <div class="services-box">
+        <h3><i class="bx bx-code-alt"></i> Web Development</h3>
+        <p>
+          Mengembangkan website responsif, fungsional, dan ramah pengguna dengan performa tinggi baik sisi frontend maupun backend.
+        </p>
+        <div class="skills-icons">
+          <img src="images/html.png" alt="HTML" title="HTML">
+          <img src="images/css.png" alt="CSS" title="CSS">
+          <img src="images/js.png" alt="JavaScript" title="JavaScript">
+          <img src="images/php.png" alt="PHP" title="PHP">
+          <img src="images/node.png" alt="Node.js" title="Node.js">
+          <img src="images/tailwind.png" alt="Tailwind CSS" title="Tailwind CSS">
+          <img src="images/bootstrap.png" alt="Bootstrap" title="Bootstrap">
+          <img src="images/varcel.png" alt="Vercel" title="Vercel">
+          <img src="images/fb.png" alt="Firebase" title="Firebase">
+          <img src="images/wordpress.png" alt="WordPress" title="WordPress">
+          <img src="images/blogger.png" alt="Blogger" title="Blogger">
+          <img src="images/if.png" alt="InfinityFree" title="InfinityFree">
+        </div>
+      </div>
 
-      <div class="skills-icons">
-        <img src="images/html.png" alt="HTML" title="HTML">
-        <img src="images/css.png" alt="CSS" title="CSS">
-        <img src="images/js.png" alt="JavaScript" title="JavaScript">
-        <img src="images/php.png" alt="PHP" title="PHP">
-        <img src="images/tailwind.png" alt="Tailwind CSS" title="Tailwind CSS">
-        <img src="images/bootstrap.png" alt="Bootstrap" title="Bootstrap">
-        <img src="images/xp.png" alt="xp" title="xp">
-        <img src="images/git.png" alt="git" title="git">
-        <img src="images/github.png" alt="github" title="github">
-        <img src="images/if.png" alt="if" title="if">
-        <img src="images/fb.png" alt="fb" title="fb">
-        <img src="images/node.png" alt="node" title="node">
-        <img src="images/varcel.png" alt="varcel" title="varcel">   
-        <img src="images/vsc.png" alt="vsc" title="vsc"> 
-        <img src="images/vscu.png" alt="vscu" title="vscu">     
-        <img src="images/ap.png" alt="ap" title="ap">
-        <img src="images/java.png" alt="java" title="java">
-        <img src="images/kotlin.png" alt="kotlin" title="kotlin">
-        <img src="images/figma.png" alt="Figma" title="Figma">
-        <img src="images/draw.png" alt="draw" title="draw">   
-        <img src="images/word.png" alt="word" title="word">
-        <img src="images/excel.png" alt="excel" title="excel">   
-        <img src="images/ppt.png" alt="ppt" title="ppt">      
-        <img src="images/blogger.png" alt="Blogger" title="Blogger">
-        <img src="images/wordpress.png" alt="WordPress" title="WordPress">
-        <img src="images/canva.png" alt="canva" title="canva">
-        <img src="images/capcut.png" alt="capcut" title="capcut">
-        <img src="images/photoshop.png" alt="photoshop" title="photoshop">
-        <img src="images/picsart.png" alt="picsart" title="picsart">
-        <img src="images/pc.png" alt="pc" title="pc">
-        <img src="images/fp.png" alt="fp" title="fp">   
-        <img src="images/sf.png" alt="sf" title="sf">      
-        <img src="images/copilot.png" alt="copilot" title="copilot">
-        <img src="images/gpt.png" alt="gpt" title="gpt">
-        <img src="images/gemini.png" alt="gemini" title="gemini">
-        <img src="images/bc.png" alt="bc" title="bc">
+      <!-- UI/UX & Design -->
+      <div class="services-box">
+        <h3><i class="bx bx-palette"></i> UI/UX & Design</h3>
+        <p>
+          Merancang prototipe antarmuka aplikasi interaktif dan menciptakan konten visual kreatif yang berfokus pada kenyamanan pengguna.
+        </p>
+        <div class="skills-icons">
+          <img src="images/figma.png" alt="Figma" title="Figma">
+          <img src="images/canva.png" alt="Canva" title="Canva">
+          <img src="images/photoshop.png" alt="Adobe Photoshop" title="Adobe Photoshop">
+          <img src="images/picsart.png" alt="PicsArt" title="PicsArt">
+          <img src="images/capcut.png" alt="CapCut" title="CapCut">
+          <img src="images/draw.png" alt="Draw.io" title="Draw.io">
+        </div>
+      </div>
+
+      <!-- Programming & Version Control -->
+      <div class="services-box">
+        <h3><i class="bx bx-terminal"></i> Programming & Mobile</h3>
+        <p>
+          Mengimplementasikan logika pemrograman aplikasi mobile (Android) serta mengelola repositori kode menggunakan version control.
+        </p>
+        <div class="skills-icons">
+          <img src="images/java.png" alt="Java" title="Java">
+          <img src="images/kotlin.png" alt="Kotlin" title="Kotlin">
+          <img src="images/git.png" alt="Git" title="Git">
+          <img src="images/github.png" alt="GitHub" title="GitHub">
+          <img src="images/vsc.png" alt="VS Code" title="VS Code">
+          <img src="images/vscu.png" alt="VS Code Insiders" title="VS Code Insiders">
+        </div>
+      </div>
+
+      <!-- IT Support & AI Tools -->
+      <div class="services-box">
+        <h3><i class="bx bx-support"></i> IT Support & AI Tools</h3>
+        <p>
+          Menangani troubleshooting perangkat, kebutuhan penulisan & analisis data, serta mempercepat alur kerja menggunakan alat kecerdasan buatan.
+        </p>
+        <div class="skills-icons">
+          <img src="images/pc.png" alt="PC Support" title="PC Support">
+          <img src="images/xp.png" alt="XAMPP" title="XAMPP">
+          <img src="images/word.png" alt="Microsoft Word" title="Microsoft Word">
+          <img src="images/excel.png" alt="Microsoft Excel" title="Microsoft Excel">
+          <img src="images/ppt.png" alt="Microsoft PowerPoint" title="Microsoft PowerPoint">
+          <img src="images/gpt.png" alt="ChatGPT" title="ChatGPT">
+          <img src="images/copilot.png" alt="GitHub Copilot" title="GitHub Copilot">
+          <img src="images/gemini.png" alt="Google Gemini" title="Google Gemini">
+          <img src="images/ap.png" alt="AppSheet" title="AppSheet">
+          <img src="images/fp.png" alt="FileZilla" title="FileZilla">
+          <img src="images/sf.png" alt="SourceForge" title="SourceForge">
+          <img src="images/bc.png" alt="Bitbucket" title="Bitbucket">
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
   <!-- Portfolio -->
@@ -164,11 +200,11 @@
       </div>
 
       <div class="portfolio-box" >
-        <img src="images/anime.png"  alt="" />
+        <img src="img/qr-generator.png"  alt="" />
         <div class="portfolio-layer">
-          <h4>Animeku</h4>
-          <p>platform yang menyediakan berbagai judul anime untuk ditonton secara online</p>
-          <a href="#"><i class="bx bx-link-external"></i></a>
+          <h4>QR Generator</h4>
+          <p>platform yang menyediakan custom qr secara Otomatis</p>
+          <a href="https://qr-genegator.vercel.app/"><i class="bx bx-link-external"></i></a>
         </div>
       </div>
 
@@ -182,11 +218,11 @@
       </div>
 
       <div class="portfolio-box" >
-        <img src="images/rakjak.png"  alt="" />
+        <img src="img/sachita.png"  alt="" />
         <div class="portfolio-layer">
-          <h4>Rakjak</h4>
-          <p>Platform digital yang memungkinkan pengguna untuk membeli dan menjual produk atau layanan secara online</p>
-          <a href="#"><i class="bx bx-link-external"></i></a>
+          <h4>Kacang Sachita</h4>
+          <p>Landing Page yang memungkinkan pengguna untuk membeli produk secara online</p>
+          <a href="kacang-sacha-inchi.vercel.app"><i class="bx bx-link-external"></i></a>
         </div>
       </div>
 
@@ -200,38 +236,11 @@
       </div>
 
       <div class="portfolio-box" >
-        <img src="images/jity.png"  alt="" />
+        <img src="img/HMI.png"  alt="" />
         <div class="portfolio-layer">
-          <h4>jity</h4>
-          <p>platform digital yang memungkinkan pengguna untuk mendengarkan jutaan lagu</p>
-          <a href="#"><i class="bx bx-link-external"></i></a>
-        </div>
-      </div>
-
-      <div class="portfolio-box" >
-        <img src="images/quiz.png"  alt="" />
-        <div class="portfolio-layer">
-          <h4>Quizip</h4>
-          <p>platform interaktif yang memungkinkan pengguna untuk mengikuti berbagai kuis secara online</p>
-          <a href="#"><i class="bx bx-link-external"></i></a>
-        </div>
-      </div>
-
-      <div class="portfolio-box" >
-        <img src="images/hmi.png"  alt="" />
-        <div class="portfolio-layer">
-          <h4>HMI</h4>
-          <p>Sedang Dikembangkan..</p>
-          <a href="#"><i class="bx bx-link-external"></i></a>
-        </div>
-      </div>
-
-      <div class="portfolio-box">
-        <img src="images/giyai.png"  alt="" />
-        <div class="portfolio-layer">
-          <h4>Giy Asisten</h4>
-          <p>Sedang Dikembangkan..</p>
-          <a href="#"><i class="bx bx-link-external"></i></a>
+          <h4>SiHMI</h4>
+          <p>platform sistem informasi Himpunan Mahasiswa Islam Mpo cabang Gorontalo</p>
+          <a href="hmi-mpo-gorontalo.vercel.app"><i class="bx bx-link-external"></i></a>
         </div>
       </div>
 
@@ -268,7 +277,7 @@
       <div class="portfolio-box">
         <img src="img/sand.png"  alt="" />
         <div class="portfolio-layer">
-          <h4>UI/UX\</h4>
+          <h4>UI/UX</h4>
           <p>SandAPP</p>
         </div>
       </div>
@@ -324,21 +333,20 @@
   </div>
 </section>
 
- 
-</section>
-  <!-- Contact -->
+   <!-- Contact -->
   <section class="contact" id="contact">
     <h2 class="heading"> Contact <span>Me!</span></h2>
-    <form action="mailto:sugiyanto_s1sisfo@mahasiswa.ung.ac.id" method="post" enctype="text/plain">
+    <form action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
       <div class="input-box">
-        <input type="text" placeholder="Nama Lengkap" />
-        <input type="email" placeholder="Alamat Email" />
+        <input type="text" name="name" placeholder="Nama Lengkap" required />
+        <input type="email" name="email" placeholder="Alamat Email" required />
       </div>
       <div class="input-box">
-        <input type="number" placeholder="Nomor HP" />
-        <input type="text" placeholder="Subjek Email" />
+        <input type="number" name="phone" placeholder="Nomor HP" />
+        <input type="text" name="subject" placeholder="Subjek Email" required />
       </div>
-      <textarea cols="30" rows="10" placeholder="Pesan Anda"></textarea>
+      <textarea name="message" cols="30" rows="10" placeholder="Pesan Anda" required></textarea>
       <input type="submit" value="Kirim Pesan" class="btn" />
     </form>
   </section>
@@ -355,55 +363,64 @@
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <script src="js/script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/tsparticles@3.3.0/tsparticles.bundle.min.js"></script>
-
   <script>
-  AOS.init();
-  </script>
-  <script>
-  // Splash typing effect
-  const splashText = [
-    "Selamat datang di Portofolio",
-    "Sugiyanto Prasetio"
-  ];
-  let splashTyping = document.getElementById('splash-typing');
-  let splashIndex = 0, charIndex = 0, isSecond = false;
-  function typeSplash() {
-    if (!splashTyping) return;
-    if (charIndex < splashText[splashIndex].length) {
-      splashTyping.innerHTML += splashText[splashIndex].charAt(charIndex);
-      charIndex++;
-      setTimeout(typeSplash, 55);
-    } else if (!isSecond && splashIndex === 0) {
-      setTimeout(() => {
-        splashTyping.innerHTML += "<br>";
-        splashIndex = 1; charIndex = 0; isSecond = true;
-        setTimeout(typeSplash, 350);
-      }, 350);
-    }
-  }
   document.addEventListener('DOMContentLoaded', function() {
-    typeSplash();
     var splash = document.getElementById('splash');
+    // Otomatis sembunyikan setelah loading bar penuh (4 detik)
     setTimeout(function() {
-      splash.classList.add('hide');
-    }, 4500);
-    splash.onclick = function() {
-      splash.classList.add('hide');
-    };
-  });
-
-  // tsParticles untuk efek partikel
-  tsParticles.load("splash-particles", {
-    background: { color: "#181c2f" },
-    particles: {
-      number: { value: 36 },
-      color: { value: "#8f43ee" },
-      shape: { type: "circle" },
-      opacity: { value: 0.22 },
-      size: { value: 3 },
-      move: { enable: true, speed: 1.2 }
+      if (splash && !splash.classList.contains('hide')) {
+        splash.classList.add('hide');
+      }
+    }, 4000);
+    
+    // Bisa diklik untuk skip langsung
+    if (splash) {
+      splash.addEventListener('click', function() {
+        splash.classList.add('hide');
+      });
     }
   });
-</script>
+
+  // tsParticles untuk efek partikel konstelasi premium
+  tsParticles.load("splash-particles", {
+    background: { color: "transparent" },
+    particles: {
+      number: { value: 45, density: { enable: true, value_area: 800 } },
+      color: { value: ["#00f2fe", "#8f43ee", "#ff007f"] },
+      shape: { type: "circle" },
+      opacity: { value: 0.35, random: true },
+      size: { value: 2.5, random: true },
+      line_linked: {
+        enable: true,
+        distance: 120,
+        color: "#8f43ee",
+        opacity: 0.15,
+        width: 1
+      },
+      move: {
+        enable: true,
+        speed: 1.5,
+        direction: "none",
+        random: false,
+        straight: false,
+        out_mode: "out",
+        bounce: false
+      }
+    },
+    interactivity: {
+      detect_on: "canvas",
+      events: {
+        onhover: { enable: true, mode: "grab" },
+        onclick: { enable: true, mode: "push" },
+        resize: true
+      },
+      modes: {
+        grab: { distance: 140, line_linked: { opacity: 0.4 } },
+        push: { particles_nb: 3 }
+      }
+    },
+    retina_detect: true
+  });
+  </script>
 </body>
 </html>
