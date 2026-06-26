@@ -1,4 +1,17 @@
 {
-  "outputDirectory": "public",
-  "cleanUrls": true
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/public/index.html"
+    },
+    {
+      "source": "/(css|js|images|img|assets)/(.*)",
+      "destination": "/public/$1/$2"
+    },
+    {
+      "source": "/404",
+      "destination": "/public/404.html"
+    }
+  ]
 }
