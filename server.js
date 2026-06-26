@@ -11,12 +11,12 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// Serve static files from 'public' directory
-app.use(express.static('public'));
+// Serve static files from root directory
+app.use(express.static(__dirname));
 
 // Fallback jika halaman tidak ditemukan (404)
 app.use((req, res) => {
-  res.status(404).sendFile(__dirname + '/public/404.html');
+  res.status(404).sendFile(__dirname + '/404.html');
 });
 
 app.listen(PORT, () => {
