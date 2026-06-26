@@ -856,7 +856,7 @@ span {
 
 @media (max-width: 768px) {
   body {
-    padding-bottom: 7rem;
+    padding-bottom: 10rem;
   }
 
   #menu-icon {
@@ -865,58 +865,86 @@ span {
   
   .navbar {
     position: fixed;
-    bottom: 0;
-    left: 0;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
     top: auto;
-    width: 100%;
-    background: rgba(11, 11, 22, 0.85);
-    backdrop-filter: var(--glass-blur);
-    -webkit-backdrop-filter: var(--glass-blur);
-    padding: 0.8rem 0.5rem;
-    box-shadow: 0 -5px 25px rgba(0, 0, 0, 0.4);
-    border-top: 1px solid var(--glass-border);
-    border-bottom: none;
+    width: calc(100% - 32px);
+    max-width: 460px;
+    background: rgba(18, 18, 38, 0.75);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    padding: 0.6rem 1rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(143, 67, 238, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 40px;
     display: flex !important;
     justify-content: space-around;
     align-items: center;
-    height: 6.5rem;
+    height: 6.8rem;
     z-index: 2000;
-    transition: none;
+    transition: all 0.3s ease;
   }
   
   .navbar a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.3rem;
+    justify-content: center;
+    gap: 0.2rem;
     font-size: 1rem !important;
     color: var(--text-muted);
     margin: 0 !important;
     flex: 1;
+    position: relative;
+    padding: 0.4rem 0;
+    transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .navbar a i {
     display: block;
     font-size: 2.2rem;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .navbar a span {
     font-size: 1rem;
+    font-weight: 500;
     background: none;
     -webkit-background-clip: initial;
     -webkit-text-fill-color: currentColor;
     color: inherit;
   }
 
-  .navbar a.active i {
-    transform: translateY(-2px);
+  .navbar a.active {
     color: var(--accent-cyan);
-    text-shadow: 0 0 10px rgba(0, 242, 254, 0.4);
+  }
+
+  .navbar a.active i {
+    transform: translateY(-5px);
+    color: var(--accent-cyan);
+    text-shadow: 0 0 10px rgba(0, 242, 254, 0.6);
   }
 
   .navbar a::after {
-    display: none;
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    width: 15px !important;
+    height: 4px;
+    border-radius: 4px;
+    background: var(--accent-cyan);
+    box-shadow: 0 0 8px var(--accent-cyan);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: block !important;
+  }
+
+  .navbar a.active::after,
+  .navbar a:hover::after {
+    width: 15px !important;
+    transform: translateX(-50%) scaleX(1);
   }
   
   .home {
